@@ -1,0 +1,56 @@
+body {
+    font-family: fantasy, sans-serif; /* because its MTG :) */
+    font-size: 100%;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+
+    background-color: white;
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+body* > {
+  box-sizing: border-box;
+}
+
+.cardContainerTemplate {
+  display: none;
+}
+
+.cards {
+  margin: 1px 0.5em 1px 0.6em;
+}
+.cardContainer {
+  display: inline-block;
+  min-width: 226px;
+  min-height: 312px;
+}
+.header {
+  height: 1em;
+  background-color: black;
+  padding: 1em;
+}
+
+.footer {
+  display: none;
+  height: 1em;
+  background-color: #009050;
+  text-align: center;
+  font-family: fantasy; /* because its MTG :) */
+  color: white;
+  margin: 0;
+  padding: 0.7em;
+}
