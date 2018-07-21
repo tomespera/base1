@@ -5,7 +5,6 @@
   "main": "web.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha --reporter spec",
-    "start": "grunt"
   },
   "directories": {
     "test": "tests"
