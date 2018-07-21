@@ -38,6 +38,26 @@ body* > {
   min-width: 226px;
   min-height: 312px;
 }
+
+.cardImage {
+  margin: 0px; /* need to figure out why it owerflows */
+  padding: 0px;
+  max-height: 311px;
+}
+.meta {
+  display: none;
+  color: white;
+  max-width: 15em;
+  font-size: 10pt;
+  background-color: black;
+  margin: 0 2px 0 2px;
+  padding: 8px 12px 8px 12px;
+}
+
+.metaToggle {
+  display: none;
+  float: right;
+}
 .header {
   height: 1em;
   background-color: black;

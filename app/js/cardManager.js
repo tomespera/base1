@@ -22,10 +22,16 @@ let fetchingCards = false;
 const footer = {}; // Footer messages
 footer.loading = 'Loading Cards..';
 footer.maximumReached = 'Maximum '+maxiumCardsToDisplay+' cards reached.';
-footer.endOfList = 'End of list - No more cards available from API';
+footer.endOfList = 'End of list - No more cards available from API'
+const metaButton = {};
+metaButton.show = "Show card details";
+metaButton.hide = "Hide card details";
 // Loads first set when page loads
 $( document ).ready(function() {
   fetchCards(apiParams);
+  // Enable display of metadata and toggling - this was a requirement but I think the page looks better without it
+  // Perhaps some css love would do the trick :)
+  toggleMetadata();
 });
 
 /**
@@ -136,6 +142,9 @@ function renderOneCard(card) {
     .removeClass('cardContainerTemplate')
     .addClass('cardContainer');
   $('.' + multiverseId + ' .cardImage').html('<a href="'+largeCardImage+'" target="_blank"><img src="'+image+'" title="'+title+'"/></a>');
+  $('.' + multiverseId + ' .name').text(name);
+  $('.' + multiverseId + ' .artist').text(artist);
+  $('.' + multiverseId + ' .set').text(set);
   $('.' + multiverseId).show();
 }
 /**
@@ -147,4 +156,22 @@ function footerMessage(message) {
   console.log('printing footer ',message);
   $('.footer').text(message);
   $('.footer').fadeIn();
+}
+
+function toggleMetadata() {
+  $('.metaToggle').show();
+  $('.meta').show();
+  $('#metaToggleButton').html(metaButton.hide);
+  $('#metaToggleButton').click( function() {
+    if ($(this).hasClass('Hide')) {
+      $(this).removeClass('Hide');
+      $(this).html(metaButton.show);
+      $('.meta').hide();
+    } else {
+      $(this).addClass('Hide');
+      $(this).html(metaButton.hide);
+      $('.meta').show();
+    }
+    //$(this).html('Hide card metadata');
+  });
 }

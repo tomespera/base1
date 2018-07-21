@@ -11,12 +11,17 @@
   <script src="/app/js/cardManager.js"></script>
 </head>
 <body>
-  <div class="header">Highspot's MTG card viewer</div>
+  <div class="header">Highspot's MTG card viewer <span class="metaToggle"><button type="button" id="metaToggleButton" class="Hide"></button></span></div>
     <div class="cards"></div>
   <div class="footer"></div>
 
   <div class="cardContainerTemplate">
     <div class="cardImage">cardImage</div>
+    <div class="meta">
+      <div class="name">name</div>
+      <div class="artist">artist</div>
+      <div class="set">set</div>
+    </div>
   </div>
 </body>
 </html>
