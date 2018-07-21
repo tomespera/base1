@@ -24,8 +24,8 @@ footer.loading = 'Loading Cards..';
 footer.maximumReached = 'Maximum '+maxiumCardsToDisplay+' cards reached.';
 footer.endOfList = 'End of list - No more cards available from API'
 const metaButton = {};
-metaButton.show = "Show card details";
-metaButton.hide = "Hide card details";
+metaButton.show = "Show details";
+metaButton.hide = "Hide details";
 // Loads first set when page loads
 $( document ).ready(function() {
   fetchCards(apiParams);
