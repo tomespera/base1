@@ -101,6 +101,7 @@ function renderCards(json) {
     return;
   }
   $('.footer').fadeOut();
+  window.theCards = json.cards;
   for (card of json.cards) {
     renderOneCard(card);
   }
